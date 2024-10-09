@@ -1,3 +1,17 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@base {
+	:root {
+		--fill-accent: hsla(209, 100%, 36%, 1);
+		--border: hsla(0, 0%, 0%, 0.06);
+		--fill-text-accent: hsla(0, 0%, 100%, 1);
+		--fill-text: hsla(0, 0%, 0%, 0.9);
+		--fill-control: hsla(0, 0%, 100%, 0.7);
+	}
+}
+
+* {
+	color: var(--fill-text);
+}

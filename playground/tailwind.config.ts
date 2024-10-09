@@ -1,11 +1,17 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 
-  theme: {
-    extend: {}
-  },
+	theme: {
+		extend: {
+			colors: {
+				accent: 'var(--fill-accent)',
+				bgControl: 'var(--fill-bg-control)',
+				border: 'var(border)'
+			}
+		}
+	},
 
-  plugins: []
+	plugins: []
 } as Config;

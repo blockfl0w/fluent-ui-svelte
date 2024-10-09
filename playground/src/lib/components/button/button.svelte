@@ -17,6 +17,7 @@
 		onmouseup?: () => any;
 		onpointerdown?: () => any;
 		onpointerup?: () => any;
+		variant?: 'primary' | 'secondary' | 'tertiary';
 	}
 	let {
 		children,
@@ -31,6 +32,7 @@
 		onmouseup = () => {},
 		onpointerdown = () => {},
 		onpointerup = () => {},
+		variant = 'primary',
 		...everythingElse
 	}: buttonProps = $props();
 
@@ -38,7 +40,10 @@
 </script>
 
 <button
-	class={combine('w-40 border border-neutral-800 px-4 py-2', className)}
+	class={combine(
+		'bg-bgControl border-border min-w-[96px] border px-[0.69rem] pb-[0.375rem] pt-1 text-center',
+		className
+	)}
 	{onclick}
 	{onkeydown}
 	{onchange}
